@@ -1,5 +1,7 @@
 # Blog
 
+This is a website for my blog posts [https://nuxzero.github.io/blog](https://nuxzero.github.io/blog).
+
 ## Run
 
 ```bash
