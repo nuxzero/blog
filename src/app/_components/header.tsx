@@ -6,7 +6,7 @@ const Header = () => {
       <Link href="/" className="hover:underline">
         Blog
       </Link>
-      .
+      <img src="/assets/mug-icon.png" alt="Mug Icon" className="fill-red-50" />
     </h2>
   );
 };
