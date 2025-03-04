@@ -10,7 +10,7 @@ export default function Index() {
       <Container>
         <Header />
         {allPosts.map((post) => (
-          <div key={post.slug}>
+          <div key={post.slug} className="mb-8">
             <a href={`/posts/${post.slug}`}>
               <span>
                 {post.title} - {post.date}
