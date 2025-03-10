@@ -29,6 +29,13 @@ const Header = () => {
             height={240}
             className="filter-dark image-pixelated"
           />
+          <Image
+            src="darth-vader4.png"
+            alt="logo"
+            width={240}
+            height={240}
+            className="filter-dark image-pixelated"
+          />
           {images.map((image) => (
             <div>
               <Image
