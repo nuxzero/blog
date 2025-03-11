@@ -9,33 +9,21 @@ const Header = () => {
       <h2 className="text-center justify-center text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 flex items-center">
         <Link href="/" className="justify-center">
           <Image
-            src="mug-icon.png"
+            src="darth-vader5.png"
             alt="logo"
-            width={140}
-            height={140}
+            width={200}
+            height={200}
             className="filter-dark image-pixelated"
           />
+          <br />
           <Image
-            src="black-mug2.png"
-            alt="black-mug"
-            width={140}
-            height={140}
-            className="filter-dark image-pixelated"
-          />
-          <Image
-            src="darth-vader3.png"
+            src="death-star.png"
             alt="logo"
-            width={240}
-            height={240}
+            width={200}
+            height={200}
             className="filter-dark image-pixelated"
           />
-          <Image
-            src="darth-vader4.png"
-            alt="logo"
-            width={240}
-            height={240}
-            className="filter-dark image-pixelated"
-          />
+          <br />
           {images.map((image) => (
             <div>
               <Image
