@@ -1,3 +1,4 @@
+import Header from "@/app/_components/header";
 import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
@@ -53,7 +54,8 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className="bg-background text-primary-text">
-        <div className="min-h-screen">{children}</div>
+        <Header />
+        <div className="min-h-screen my-8">{children}</div>
         <Footer />
       </body>
     </html>
