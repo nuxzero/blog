@@ -55,7 +55,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-primary-text flex flex-col min-h-screen">
         <Header />
-        <div className="flex-grow my-8 mx-2">{children}</div>
+        <div className="flex-grow my-8 mx-4">{children}</div>
         <Footer />
       </body>
     </html>
