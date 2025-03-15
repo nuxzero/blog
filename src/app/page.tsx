@@ -1,5 +1,5 @@
 import Container from "@/app/_components/container";
-import { getAllPosts } from "@/lib/api";
+import { getAllPosts, getBasePath } from "@/lib/api";
 import Header from "./_components/header";
 
 export default function Index() {
@@ -11,7 +11,7 @@ export default function Index() {
         <Header />
         {allPosts.map((post) => (
           <div key={post.slug} className="mb-8">
-            <a href={`/posts/${post.slug}`}>
+            <a href={`${getBasePath()}/posts/${post.slug}`}>
               <span>
                 {post.title} - {post.date}
               </span>

@@ -7,6 +7,10 @@ import getConfig from "next/config";
 const postsDirectory = join(process.cwd(), "_posts");
 const { publicRuntimeConfig } = getConfig();
 
+export function getBasePath(): string {
+  return publicRuntimeConfig.basePath;
+}
+
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
@@ -18,8 +22,7 @@ export function getPostBySlug(slug: string) {
   let { data, content } = matter(fileContents);
 
   let dataString = JSON.stringify(data);
-  const basePath = publicRuntimeConfig.basePath;
-  dataString = dataString.replace(/\$\{basePath\}/gi, basePath);
+  dataString = dataString.replace(/\$\{basePath\}/gi, getBasePath());
   data = JSON.parse(dataString);
   return { ...data, slug: realSlug, content } as Post;
 }
