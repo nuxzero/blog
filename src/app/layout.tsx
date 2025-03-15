@@ -1,13 +1,13 @@
 import Header from "@/app/_components/header";
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: "BLACK BLOG",
+  description: "An ordinary blog.",
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -53,9 +53,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body className="bg-background text-primary-text">
+      <body className="bg-background text-primary-text flex flex-col min-h-screen">
         <Header />
-        <div className="min-h-screen my-8">{children}</div>
+        <div className="flex-grow my-8 mx-2">{children}</div>
         <Footer />
       </body>
     </html>

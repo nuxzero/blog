@@ -5,7 +5,7 @@ export default function Index() {
 
   return (
     <main>
-      <div className="max-w-2xl mx-auto px-2">
+      <div className="max-w-2xl mx-auto">
         {allPosts.map((post) => (
           <div key={post.slug} className="my-2">
             <a
