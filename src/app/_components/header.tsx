@@ -1,57 +1,32 @@
 import Image from "next/image";
-import AsciiArt from "./ascii-art";
 import Link from "next/link";
 
 const Header = () => {
-  const images = ["test2.png", "test3.png", "black-sabbath.png"];
   return (
     <div>
-      <h2 className="text-center justify-center text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 flex items-center">
+      <div className="text-center justify-center tracking-tight md:tracking-tighter leading-tight mb-8 mt-8 flex items-center">
         <Link href="/" className="justify-center">
           <Image
-            src="darth-vader5.png"
+            src="/death-star2.png"
             alt="logo"
-            width={200}
-            height={200}
+            width={140}
+            height={140}
             className="filter-dark image-pixelated"
           />
-          <br />
-          <Image
-            src="death-star.png"
-            alt="logo"
-            width={200}
-            height={200}
-            className="filter-dark image-pixelated"
-          />
-          <br />
-          {images.map((image) => (
-            <div>
-              <Image
-                src={image}
-                alt={image}
-                width={320}
-                height={320}
-                className="filter-dark image-pixelated"
-              />
-              <br />
-            </div>
-          ))}
-          {/* <AsciiArt fileName="coffee-mug" /> */}
-          <span>nux&nbsp;&nbsp;</span>
+          <h1 className="font-size-2xl font-bold mt-6">BLACK BLOG</h1>
+          <p className="mt-1">An ordinary blog.</p>
         </Link>
-      </h2>
-      <div>
-        <ul>
-          <li>
-            <Link href="/">Posts</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-        </ul>
+      </div>
+      <div className="flex items-center justify-center space-x-8">
+        <Link href="/" className="hover:underline">
+          Posts
+        </Link>
+        <Link href="/projects" className="hover:underline">
+          Projects
+        </Link>
+        <Link href="/about" className="hover:underline">
+          About
+        </Link>
       </div>
     </div>
   );
