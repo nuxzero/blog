@@ -12,7 +12,7 @@ export default function Index() {
               href={`${getBasePath()}/posts/${post.slug}`}
               className="flex justify-between hover:underline"
             >
-              <span>{ellipsis(post.title, 70)}</span>
+              <span className="mr-2">{ellipsis(post.title, 70)}</span>
               <span>{new Date(post.date).toLocaleDateString()}</span>
             </a>
           </div>

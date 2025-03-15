@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
+import { getBasePath } from "@/lib/api";
 
 export default function Gallery() {
   const images = fs.readdirSync(path.join(process.cwd(), "/public/gallery"));
@@ -13,7 +14,7 @@ export default function Gallery() {
           {images.map((image) => (
             <div key={image}>
               <Image
-                src={`/gallery/${image}`}
+                src={`${getBasePath()}/gallery/${image}`}
                 alt={image}
                 width={200}
                 height={200}

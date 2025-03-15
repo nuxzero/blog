@@ -1,3 +1,4 @@
+import { getBasePath } from "@/lib/api";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ const Header = () => {
       <div className="text-center justify-center tracking-tight md:tracking-tighter leading-tight mt-8 flex items-center">
         <Link href="/" className="justify-center">
           <Image
-            src="/death-star2.png"
+            src={`${getBasePath()}/death-star2.png`}
             alt="logo"
             width={140}
             height={140}
