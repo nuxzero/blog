@@ -3,9 +3,8 @@ export default function About() {
     <div className="justify-center max-w-md mx-auto">
       <h1 className="text-center font-bold text-lg">About</h1>
       <p className="mt-4">
-        Welcome to BLACK BLOG! I'm a software engineer sharing my experiences
-        and insights on coding, technology, and continuous learning. Join me as
-        I explore the world of programming.
+        Just an ordinary guy's blog, BLACK BLOG is where I share my learning
+        journey, experiences, hobbies, and whatever else comes to mind.
       </p>
     </div>
   );
