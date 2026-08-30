@@ -25,6 +25,10 @@
 .DS_Store
 *.pem
 
+# next.js agent rules (generated)
+/AGENTS.md
+/CLAUDE.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*

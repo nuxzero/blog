@@ -10,12 +10,12 @@ const nextConfig = {
   assetPrefix: isProd ? "/blog/" : "",
   output: "export",
   distDir: "dist",
+  agentRules: false,
+  turbopack: {
+    root: __dirname,
+  },
   images: {
     unoptimized: true,
-  },
-  publicRuntimeConfig: {
-    // To be able to access the basePath in the app.
-    basePath: isProd ? "/blog" : "",
   },
 };
 

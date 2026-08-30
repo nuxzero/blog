@@ -2,13 +2,11 @@ import { Post } from "@/interfaces/post";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
-import getConfig from "next/config";
 
 const postsDirectory = join(process.cwd(), "_posts");
-const { publicRuntimeConfig } = getConfig();
 
 export function getBasePath(): string {
-  return publicRuntimeConfig.basePath;
+  return process.env.NODE_ENV === "production" ? "/blog" : "";
 }
 
 export function getPostSlugs() {
